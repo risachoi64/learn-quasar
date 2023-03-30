@@ -16,6 +16,11 @@
 
         <q-btn flat round dense :icon="darkModeIcon" @click="toggleDarkMode" />
         <!-- dark_mode -->
+        <q-btn round size="xs" class="q-ml-md" to="/profile">
+          <q-avatar>
+            <img src="/hicat.png" />
+          </q-avatar>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -80,12 +85,12 @@ const linksList = [
     icon: 'school',
     to: '/flex-grid-1',
   },
-  {
-    title: 'Flex Grid 2',
-    caption: 'quasar.dev',
-    icon: 'school',
-    to: '/flex-grid-2',
-  },
+  // {
+  //   title: 'Flex Grid 2',
+  //   caption: 'quasar.dev',
+  //   icon: 'school',
+  //   to: '/flex-grid-2',
+  // },
 ];
 </script>
 
