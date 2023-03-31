@@ -3,7 +3,6 @@
     <section class="q-mb-xl">
       <div class="text-h5">QForm Component</div>
       <q-separator class="q-my-md" />
-      const myForm = ref(null);
       <q-form
         ref="myForm"
         class="q-gutter-y-md q-mt-lg"
@@ -84,6 +83,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useQuasar } from 'quasar';
+
+const $q = useQuasar();
 
 const myForm = ref(null);
 
@@ -121,9 +123,13 @@ const reset = () => {
 const onSubmit = () => {
   if (form.value.accept !== true) {
     alert('동의해주세요!');
-  } else {
-    alert('성공입니다!');
+    return;
   }
+  $q.loading.show();
+  setTimeout(() => {
+    $q.loading.hide();
+    alert('성공');
+  }, 3000);
 };
 
 const onReset = () => {

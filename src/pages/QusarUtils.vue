@@ -41,6 +41,7 @@ const { pad } = format;
 
 const objA = { name: 'bbc' };
 const objB = { name: 'bbc' };
+
 const { deepEqual } = is;
 </script>
 
