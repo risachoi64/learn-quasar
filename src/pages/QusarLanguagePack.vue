@@ -17,10 +17,18 @@
       <q-separator class="q-my-md" />
       <div>{{ $q.lang }}</div>
     </section>
+    <section class="q-mb-xl">
+      <div class="text-h4">i18n-locale</div>
+      <q-separator class="q-my-md" />
+      <div>locale {{ locale }}</div>
+      <div>hello {{ $t('hello') }}</div>
+      <div>productName {{ $t('productName') }}</div>
+    </section>
   </q-page>
 </template>
 <script>
 import languages from 'quasar/lang/index.json';
+import { registerLocaleFallbacker } from '@intlify/core-base';
 const appLanguages = languages.filter(lang =>
   ['ko-KR', 'en-US'].includes(lang.isoName),
 );
@@ -35,6 +43,7 @@ console.log('langOptions :', langOptions);
 <script setup>
 import { useQuasar } from 'quasar';
 import { ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const $q = useQuasar();
 const lang = ref($q.lang.isoName);
@@ -43,9 +52,14 @@ watch(lang, val => {
   import('../../node_modules/quasar/lang/' + val).then(lang => {
     $q.lang.set(lang.default);
     $q.localStorage.set('lang', val);
+    locale.value = val;
   });
   //
 });
+
+const { t, locale } = useI18n();
+console.log('hello', t('hello'));
+console.log('productName', t('productName'));
 </script>
 
 <style lang="scss" scoped></style>

@@ -33,6 +33,7 @@ module.exports = configure(function (/* ctx */) {
       'loading-plusin',
       'loading-bar-plugin',
       'quasar-lang-pack',
+      'i18n',
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
