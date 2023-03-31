@@ -102,6 +102,12 @@ const linksList = [
   //   icon: 'school',
   //   to: '/flex-grid-2',
   // },
+  {
+    title: 'Form Handling',
+    caption: 'quasar.dev',
+    icon: 'school',
+    to: '/form-handling',
+  },
 ];
 </script>
 
