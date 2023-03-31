@@ -38,6 +38,10 @@ const routes = [
         path: 'form-handling',
         component: () => import('src/pages/FormHandling.vue'),
       },
+      {
+        path: 'quasar-utils',
+        component: () => import('src/pages/QusarUtils.vue'),
+      },
     ],
   },
   {
