@@ -1,8 +1,8 @@
 {
   "name": "learn-quasar",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Quasar를 활용하여 멋진 UI를 만들 수 있도록 기초부터 활용까지 한번에 학습한 강의 실습 결과물",
+  "productName": "냥코딩 Quasar 강의",
   "author": "risachoi64 <risa.choi64@gmail.com>",
   "private": true,
   "scripts": {

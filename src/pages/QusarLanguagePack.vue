@@ -49,7 +49,7 @@ const $q = useQuasar();
 const lang = ref($q.lang.isoName);
 watch(lang, val => {
   console.log('val', val);
-  import('../../node_modules/quasar/lang/' + val).then(lang => {
+  import(`../../node_modules/quasar/lang/${val}.mjs`).then(lang => {
     $q.lang.set(lang.default);
     $q.localStorage.set('lang', val);
     locale.value = val;

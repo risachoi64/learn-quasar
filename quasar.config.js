@@ -60,7 +60,7 @@ module.exports = configure(function (/* ctx */) {
         node: 'node16',
       },
 
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      vueRouterMode: 'history', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -111,7 +111,7 @@ module.exports = configure(function (/* ctx */) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['LocalStorage', 'Loading', 'LoadingBar'],
+      plugins: ['LocalStorage', 'Loading', 'LoadingBar', 'Meta'],
       config: {
         // loading: { delay: 0, message: '로딩중', spinnerSize: 40 },
       },
